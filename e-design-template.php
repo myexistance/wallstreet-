@@ -17,7 +17,7 @@
 
         <?php while( have_posts() ): the_post() ?>
 
-            <div class="card col-10 col-sm-8 col-md-12 mr-auto ml-auto mb-4">
+            <div class="card col-12 col-sm-8 col-md-12 mr-auto ml-auto mb-4">
 
 
 
@@ -29,7 +29,7 @@
                   <?php the_content(); ?>
               </div>
               <hr>
-              <img><?php the_post_thumbnail('faetured_small'); ?>
+              <img><?php the_post_thumbnail(); ?>
               <hr>
 
           </div>

@@ -25,7 +25,7 @@
 
               <h5 class="textCenter mb-4"><?php the_title(); ?></h5>
               <div class="center mb-4">
-              <img class="floatLeft"><?php the_post_thumbnail(); ?>
+              <img><?php the_post_thumbnail(); ?>
               </div>
               <div class="card col-8 col-sm-8 col-md-8 mr-auto ml-auto">
                   <?php the_content(); ?>

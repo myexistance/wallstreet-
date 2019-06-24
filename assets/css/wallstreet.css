@@ -64,6 +64,10 @@ img {
 
 }
 
+.floatLeft {
+  float: left;
+}
+
 h2 {
   font-size: 25px;
 }

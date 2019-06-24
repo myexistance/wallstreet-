@@ -27,11 +27,11 @@
               <div class="center mb-4">
               <img class="floatLeft"><?php the_post_thumbnail(); ?>
               </div>
-              <div class="content">
+              <div class="card col-8 col-sm-8 col-md-8 mr-auto ml-auto">
                   <?php the_content(); ?>
               </div>
 
-              
+
 
           </div>
 

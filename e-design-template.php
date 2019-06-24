@@ -29,7 +29,7 @@
                   <?php the_content(); ?>
               </div>
               <hr>
-              <img><?php the_post_thumbnail(); ?></img>
+              <img><?php the_post_thumbnail('faetured_small'); ?>
               <hr>
 
           </div>

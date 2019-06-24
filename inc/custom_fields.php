@@ -1,53 +1,7 @@
 <?php
 
 $metaboxes = array(
-    'post_meta' => array(
-        'title' => 'Extra Post Information',
-        'post_type' => 'event',
-        'fields' => array(
-            'location' => array(
-                'title' => 'Post Location',
-                'type' => 'text',
-                'description' => 'Where was this post located?'
-            ),
-            'price' => array(
-                'title' => 'Post Price',
-                'type' => 'number',
-                'description' => 'The price of the post'
-            ),
-            'side' => array(
-                'title' => 'What side is it on?',
-                'type' => 'select',
-                'description' => '',
-                'choices' => array('Left', 'Right')
-            ),
-            'extra_content' => array(
-                'title' => 'Extra Content',
-                'type' => 'textarea',
-                'description' => '',
-                'rows' => 5
-            )
-        )
-    ),
-    'page_meta' => array(
-        'title' => 'Extra Page Information',
-        'post_type' => 'page'
-    ),
-    'events_meta' => array(
-        'title' => 'Extra Event Information',
-        'post_type' => 'event'
-    ),
-    'staff_meta' => array(
-        'title' => 'Extra Staff Information',
-        'post_type' => 'staff',
-        'fields' => array(
-            'location' => array(
-                'title' => 'Role',
-                'type' => 'text',
-                'description' => 'Where is your role?'
-            ),
-        )
-    ),
+
 
     'enquiries' => array(
         'title' => 'Enquiries',

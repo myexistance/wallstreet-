@@ -2,13 +2,11 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?> >
-        <!-- <p>This is from header.php</p> -->
 
-        <!-- <header id="fh5co-header" role="banner"> -->
 
         <nav class="navbar navbar-expand-lg navbar-light">
 

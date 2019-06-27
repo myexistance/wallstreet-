@@ -98,6 +98,8 @@ require get_template_directory() . '/inc/custom_fields.php';
 
 
   add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'title-tag' );
+
 
   add_image_size( 'featured-large', 640, 294, true ); // width, height, crop
   add_image_size( 'featured-small', 320, 147, true );

@@ -104,6 +104,28 @@ h2 {
   }
 
 }
+@media screen and (min-width: 380px) {
+  .navbar {
+      height: 200px;
+   }
+  #logo {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    bottom: -20px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    padding-right: 100px; //adjust to have padding of menus
+  }
+  #navbarMobile {
+    padding-left: 300px;
+  }
+  .card {
+    width 100% !important;
+    border: none;
+  }
+
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

@@ -30,7 +30,7 @@ if( have_posts() ): ?>
     <div id="postList" class="row cardList">
     <?php $i = 1; while( have_posts() && $i <4): the_post() ?>
 
-        <div class="card col-12 col-sm-8 col-md-3 mr-auto ml-auto mb-4">
+        <div class="card col-12 col-sm-12 col-md-4 mr-auto ml-auto mb-4">
 
             <div class="head">
             <h5 class=""><?php the_title(); ?></h5>

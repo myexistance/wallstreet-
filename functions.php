@@ -182,3 +182,7 @@ function wallstreet_custom_post_type (){
   register_post_type('commercial',$args1);
 }
 add_action('init','wallstreet_custom_post_type');
+
+function add_google_fonts() {
+wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );

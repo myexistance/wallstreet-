@@ -39,7 +39,7 @@ if( have_posts() ): ?>
 
             <img><?php the_post_thumbnail('featured-large'); ?></img>
             <div class="content">
-                <?php get_template_part( 'content', get_post_format() ); ?>
+                <p><?php get_template_part( 'content', get_post_format() ); ?></p>
             </div>
 
 

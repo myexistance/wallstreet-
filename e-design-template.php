@@ -1,5 +1,5 @@
 <?php
-    /* Template Name: e-design Template */
+    /* Template Name: E-design Template */
 ?>
 <?php get_header(); ?>
 

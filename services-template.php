@@ -26,7 +26,7 @@ if($lastservice -> have_posts() ): ?>
 
             <h2 class="textCenter"><?php the_title(); ?></h2>
             <div class="content">
-                <?php the_content(); ?>
+                <p><?php the_content(); ?></p>
             </div>
 
             <hr>

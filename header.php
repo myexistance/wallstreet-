@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
@@ -75,7 +77,7 @@
                             <a class="nav-link" href="about">About</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="visit-us">Enquiries</a>
+                          <a class="nav-link" href="visit-us">Enquiry</a>
                       </li>
 
                     </ul>

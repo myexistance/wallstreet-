@@ -1,5 +1,5 @@
 <?php
-    /* Template Name: Contact Template */
+    /* Template Name: Enquiry Template */
 
     if($_POST){
         $errors = array();

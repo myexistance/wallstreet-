@@ -36,7 +36,10 @@ add_action('wp_enqueue_scripts', 'add_custom_files');
 function register_my_menu() {
     register_nav_menu('left_menu','The menu which appears at the left of the page');
     register_nav_menu('right_menu','The menu which appears at the right of the page');
+    register_nav_menu('social_menu','The menu which appears at the footer of the page');
 }
+
+
 add_action( 'init', 'register_my_menu' );
 
 // Register Custom Navigation Walker
@@ -186,3 +189,50 @@ add_action('init','wallstreet_custom_post_type');
 function add_google_fonts() {
 wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+
+
+
+// customizer header image
+
+add_action( 'customize_register', 'wallstreet_customize_register' );
+function wallstreet_customize_register($wp_customize) {
+
+$wp_customize->add_section( 'slides', array(
+    'title'          => 'Slides',
+    'priority'       => 25,
+) );
+
+$wp_customize->add_setting( 'first_slide', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'first_slide', array(
+    'label'   => 'First Slide',
+    'section' => 'slides',
+    'settings'   => 'first_slide',
+) ) );
+
+$wp_customize->add_setting( 'second_slide', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'second_slide', array(
+    'label'   => 'Second Slide',
+    'section' => 'slides',
+    'settings'   => 'second_slide',
+) ) );
+
+$wp_customize->add_setting( 'third_slide', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'third_slide', array(
+    'label'   => 'Third Slide',
+    'section' => 'slides',
+    'settings'   => 'third_slide',
+) ) );
+}
+
+
+//social

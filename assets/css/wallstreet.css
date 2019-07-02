@@ -67,6 +67,15 @@ input {
   caret-color: #f00;
 }
 
+.social-icon {
+  float: left;
+  display: inline-block;
+  position: absolute;
+
+
+  margin: 0 5px;
+}
+
 /* navbar
 -------------------------------------------------- */
 

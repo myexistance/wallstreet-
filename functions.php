@@ -36,7 +36,7 @@ add_action('wp_enqueue_scripts', 'add_custom_files');
 function register_my_menu() {
     register_nav_menu('left_menu','The menu which appears at the left of the page');
     register_nav_menu('right_menu','The menu which appears at the right of the page');
-    register_nav_menu('social_menu','The menu which appears at the footer of the page');
+
 }
 
 
@@ -203,6 +203,8 @@ $wp_customize->add_section( 'slides', array(
     'priority'       => 25,
 ) );
 
+
+
 $wp_customize->add_setting( 'first_slide', array(
     'default'        => '',
 ) );
@@ -232,7 +234,48 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'thir
     'section' => 'slides',
     'settings'   => 'third_slide',
 ) ) );
+
+
+// social
+
+$wp_customize->add_section( 'social', array(
+    'title'          => 'Social',
+    'priority'       => 30,
+) );
+
+
+
+$wp_customize->add_setting( 'facebook', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook', array(
+    'label'   => 'Facebook',
+    'section' => 'social',
+    'settings'   => 'facebook',
+    'type' => 'input'
+) ) );
+
+$wp_customize->add_setting( 'instagram', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'instagram', array(
+    'label'   => 'Instagram',
+    'section' => 'social',
+    'settings'   => 'instagram',
+    'type' => 'input'
+) ) );
+
+$wp_customize->add_setting( 'pinterest', array(
+    'default'        => '',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'pinterest', array(
+    'label'   => 'Pinterest',
+    'section' => 'social',
+    'settings'   => 'pinterest',
+    'type' => 'input'
+) ) );
+
 }
-
-
-//social

@@ -8,7 +8,7 @@
 
 
 
-<!-- <h1>This is from our index.php file</h1> -->
+
 
 <?php if( have_posts() ): ?>
 

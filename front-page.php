@@ -5,20 +5,8 @@
 
 <?php if ( get_header_image() ) : ?>
 <main class="container" role="main">
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="<?php echo get_theme_mod('first_slide') ?>" height="200" width="">
-    </div>
-    <div class="carousel-item">
-      <img src="<?php echo get_theme_mod('second_slide') ?>" height="200" width="">
-    </div>
-    <div class="carousel-item">
-      <img src="<?php echo get_theme_mod('third_slide') ?>" height="200" width="">
-    </div>
-  </div>
-</div>
-<!-- </main> -->
+  <img src="<?php header_image(); ?>" height="450" width="100%">
+
 <?php endif; ?>
 
 <!-- <h1>This is from our index.php file</h1> -->

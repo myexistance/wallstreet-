@@ -11,21 +11,9 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
 
 
-      <?php
-
-      wp_nav_menu( array(
-        'theme_location'    => 'left_menu',
-        'depth'             => 1,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => '#navbarMobile',
-        'menu_class'        => 'nav navbar-nav ml-auto',
-        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-        'walker'            => new WP_Bootstrap_Navwalker(),
-      ) );
-      ?>
 
 
 
@@ -35,7 +23,7 @@
         </div>
       <!-- </a> -->
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
 
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,7 +38,7 @@
             			'depth'             => 1,
             			'container'         => 'div',
             			'container_class'   => 'collapse navbar-collapse',
-            			'container_id'      => '#navbarMobile',
+            			'container_id'      => 'bs-example-navbar-collapse-1',
             			'menu_class'        => 'nav navbar-nav ml-auto ',
             			'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
             			'walker'            => new WP_Bootstrap_Navwalker(),
@@ -58,28 +46,5 @@
             		?>
 
 
-                <!-- Mobile -->
-                <div class="collapse" id="navbarMobile">
-                    <ul class="nav navbar-nav">
-                      <li class="nav-item">
-                          <a class="nav-link" href="services">Services</a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link" href="e-design">E-Design</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="residential">Residential</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="commercial">Commercial</a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link" href="about">About</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="visit-us">Enquiry</a>
-                      </li>
-
-                    </ul>
                 </div>
             </nav>

@@ -34,12 +34,7 @@
         }
 
 
-        // var_dump($_POST);
-        // var_dump($_POST['enquiriesName']);
-        //
-        //
-        //
-        // die('the form has been submitted');
+
     }
 
 
@@ -49,7 +44,7 @@
 ?>
 
 <?php get_header(); ?>
-<main role="main">
+<main class="container" role="main">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -85,7 +80,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="alert alert-sucsess">
-                                <p>Well Done, you sent the form</p>
+                                <p>Your enquiry has been successfully submitted.</p>
                             </div>
                         </div>
                     </div>

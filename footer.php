@@ -27,5 +27,6 @@
 
 
 
-</div>
+
+</main>
 </footer>

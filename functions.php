@@ -11,21 +11,7 @@ function add_custom_files(){
 
     wp_enqueue_script('my_bootstrap_script', get_template_directory_uri() . '/assets/js/bootstrap.js', array(), '4.3.1', true);
 
-    // wp_enqueue_script('show_more_posts', get_template_directory_uri() . '/assets/js/showMore.js', array('jquery'), '0.1', true);
 
-    // global $wp_query;
-    //
-    // $currentPage = get_query_var('paged');
-    // if($currentPage == 0){
-    //     $currentPage = 1;
-    // }
-
-    // wp_localize_script('show_more_posts', 'load_more', array(
-    //     'ajax_url' => site_url() . '/wp-admin/admin-ajax.php',
-    //     'query' => json_encode($wp_query->query_vars),
-    //     'max_page' => $wp_query->max_num_pages,
-    //     'current_page' => $currentPage
-    // ));
 
 };
 add_action('wp_enqueue_scripts', 'add_custom_files');
@@ -34,7 +20,7 @@ add_action('wp_enqueue_scripts', 'add_custom_files');
 
 
 function register_my_menu() {
-    register_nav_menu('left_menu','The menu which appears at the left of the page');
+
     register_nav_menu('right_menu','The menu which appears at the right of the page');
 
 }
@@ -65,7 +51,7 @@ add_action( 'after_setup_theme', 'wallstreet_custom_logo_setup' );
 
 
 
-add_theme_support( 'custom-header' );
+
 
 function wallstreet_custom_header_setup() {
     $defaults = array(
@@ -90,14 +76,15 @@ function wallstreet_custom_header_setup() {
         // function to produce preview markup in the admin screen
         'admin-preview-callback'    => 'adminpreview_cb',
         );
+        add_theme_support( 'custom-header' );
 }
 add_action( 'after_setup_theme', 'wallstreet_custom_header_setup' );
 
 
-require get_template_directory() . '/inc/custom_post_types.php';
 
 
-require get_template_directory() . '/inc/custom_fields.php';
+
+
 
 
   add_theme_support( 'post-thumbnails' );
@@ -112,6 +99,29 @@ require get_template_directory() . '/inc/custom_fields.php';
 add_theme_support( 'post-formats', array( 'link') );
 
 //custom post type
+
+
+function add_enquiries_post_type(){
+    $labels = array(
+        'name' => _x('Enquiries', 'post type name', 'wallstreet'),
+        'singular_name' => _x('Enquiry', 'post types singluar name', 'wallstreet'),
+        'add_new_item' => _x('Add New Enquiry', 'adding new enquiry', 'wallstreet')
+    );
+    $args = array(
+        'labels' => $labels,
+        'description' => 'Enquiries that come through our website',
+        'public' => true,
+        'menu_position' => 20,
+        'query_var' => true,
+        'menu_icon' => 'dashicons-megaphone',
+        'supports' => array(
+            'title',
+            'editor'
+        ),
+    );
+    register_post_type('enquiries', $args);
+}
+add_action('init', 'add_enquiries_post_type');
 
 function wallstreet_custom_post_type (){
 
@@ -193,47 +203,11 @@ add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 
 
-// customizer header image
+
 
 add_action( 'customize_register', 'wallstreet_customize_register' );
 function wallstreet_customize_register($wp_customize) {
 
-$wp_customize->add_section( 'slides', array(
-    'title'          => 'Slides',
-    'priority'       => 25,
-) );
-
-
-
-$wp_customize->add_setting( 'first_slide', array(
-    'default'        => '',
-) );
-
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'first_slide', array(
-    'label'   => 'First Slide',
-    'section' => 'slides',
-    'settings'   => 'first_slide',
-) ) );
-
-$wp_customize->add_setting( 'second_slide', array(
-    'default'        => '',
-) );
-
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'second_slide', array(
-    'label'   => 'Second Slide',
-    'section' => 'slides',
-    'settings'   => 'second_slide',
-) ) );
-
-$wp_customize->add_setting( 'third_slide', array(
-    'default'        => '',
-) );
-
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'third_slide', array(
-    'label'   => 'Third Slide',
-    'section' => 'slides',
-    'settings'   => 'third_slide',
-) ) );
 
 
 // social
